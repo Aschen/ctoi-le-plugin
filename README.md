@@ -1,75 +1,37 @@
-# kuzzle-core-plugin-boilerplate
+# C'toi le plugin
 
-Here, you'll find the boilerplate to start coding a new [Kuzzle Core Plugin](http://docs.kuzzle.io/guide/essentials/plugins/). A Core Plugin allows you to
+(c'toi le readme)
 
-* [listen asynchronously](http://docs.kuzzle.io/plugins-reference/plugins-features/adding-hooks), and perform operations that depend on data-related events;
-* [listen synchronously](http://docs.kuzzle.io/plugins-reference/plugins-features/adding-pipes), and approve, modify and/or reject data-related queries;
-* [add a controller route](http://docs.kuzzle.io/plugins-reference/plugins-features/adding-controllers) to expose new actions to the API;
-* [add an authentication strategy](http://docs.kuzzle.io/plugins-reference/plugins-features/adding-authentication-strategy) to Kuzzle.
+## Installation
 
-The boilerplate demonstrates each feature of a Core Plugin.
+Integrate with Kuzzle (c'toi le Kuzzle) :
+ - `git clone https://github.com/kuzzleio/kuzzle`
+ - `git clone https://github.com/Aschen/ctoi-le-plugin kuzzle/plugins/enabled/ctoi-le-plugin`
+ - `cd kuzzle`
+ - `docker-compose -f docker-compose/dev.yml`
+ - `curl http://localhost:7512/users/_me?pretty`
 
-## Plugin development
-
-This plugin is useful only if you use it as the starting point of your work. It's a boilerplate.
-
-### On an existing Kuzzle
-
-Clone this repository locally and make it accessible from the `plugins/enabled` directory relative to the Kuzzle installation directory. A common practice is to put the code of the plugin in `plugins/available` and create a symbolic link to it in `plugins/enabled`.
-
-**Note.** If you are running Kuzzle within a Docker container, you will need to mount the local plugin installation directory as a volume in the container.
-
-Please refer to the Guide for further instructions on [how to install Kuzzle plugins](http://docs.kuzzle.io/guide/essentials/plugins/#managing-plugins).
-
-### On a pristine Kuzzle stack
-
-You can use the `docker-compose.yml` file included in this repository to start a development-oriented stack to help you creating your custom Kuzzle Core plugin.
-
-Clone this repository locally and type:
-
-```bash
-$ docker-compose -f docker/docker-compose.yml up
 ```
-
-This command will start a Kuzzle stack with this plugin enabled. To make development more confortable, a watcher will also be activated, restarting Kuzzle every time a modification is detected.
-
-#### Working on a different Kuzzle tag
-
-You can choose to work on the Kuzzle development branch by defining the following environment variables before launching `docker-compose`:
-
-```bash
-$ export KUZZLE_DOCKER_TAG=1.2.13
-$ docker-compose -f docker/docker-compose.yml up
-```
-
-These environment variables enable you to specify any existing build tag available on [Docker Hub](https://hub.docker.com/r/kuzzleio/kuzzle/tags/).
-
-#### Customizing the plugin instance name
-
-You may like to name your plugin differently than the name of this repo. To do so, rename the local directory of the repo and define the following environment variable before launching the development stack:
-
-```bash
-$ export PLUGIN_NAME=my-awesome-plugin
-$ docker-compose -f docker/docker-compose.yml up
-```
-
-## `manifest.json` file
-
-`manifest.json` are here to describe usage of your plugin:
-
-```js
 {
-  /**
-   * This is metadata to describe your plugin
-   */
-  "name": "name-of-your-plugin",
-  "version": "2.3.1",
-
- /**
-  * Define which core version this plugin is designed for.
-  * Use semver notation to born Kuzzle version this plugins supports
-  * - if set, and installation requirement is not meet, an error will be thrown and Kuzzle will not start
-  */
-  "kuzzleVersion": "^1.2.x"
+  "requestId": "214b6721-b165-4aeb-87a9-cd6cc34a3cd2",
+  "status": 200,
+  "error": null,
+  "controller": "auth",
+  "action": "getCurrentUser",
+  "collection": null,
+  "index": null,
+  "volatile": null,
+  "result": {
+    "_id": "-1",
+    "_source": {
+      "profileIds": [
+        "anonymous"
+      ],
+      "name": "Anonymous"
+    },
+    "_meta": {},
+    "strategies": [],
+    "message": "c'toi le auth contrôleur"
+  }
 }
 ```
