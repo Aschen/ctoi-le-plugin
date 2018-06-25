@@ -5,11 +5,11 @@
 ## Installation
 
 Integrate with Kuzzle (c'toi le Kuzzle) :
- - `git clone https://github.com/kuzzleio/kuzzle`
- - `git clone https://github.com/Aschen/ctoi-le-plugin kuzzle/plugins/enabled/ctoi-le-plugin`
- - `cd kuzzle`
- - `docker-compose -f docker-compose/dev.yml`
- - `curl http://localhost:7512/users/_me?pretty`
+  - `git clone https://github.com/kuzzleio/kuzzle`
+  - `git clone https://github.com/Aschen/ctoi-le-plugin kuzzle/plugins/enabled/ctoi-le-plugin`
+  - `cd kuzzle`
+  - `docker-compose -f docker-compose/dev.yml`
+  - `curl http://localhost:7512/users/_me?pretty`
 
 Standalone :
   - `git clone https://github.com/Aschen/ctoi-le-plugin`
@@ -17,7 +17,7 @@ Standalone :
   - `docker-compose -f docker/docker-compose.yml up`
   - `curl http://localhost:7512/users/_me?pretty`
 
-Result :
+Result (c'toi le result):
 
 ```
 {
