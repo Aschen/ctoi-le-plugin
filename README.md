@@ -11,6 +11,14 @@ Integrate with Kuzzle (c'toi le Kuzzle) :
  - `docker-compose -f docker-compose/dev.yml`
  - `curl http://localhost:7512/users/_me?pretty`
 
+Standalone :
+  - `git clone https://github.com/Aschen/ctoi-le-plugin`
+  - `cd c'toi le plugin`
+  - `docker-compose -f docker/docker-compose.yml up`
+  - `curl http://localhost:7512/users/_me?pretty`
+
+Result :
+
 ```
 {
   "requestId": "214b6721-b165-4aeb-87a9-cd6cc34a3cd2",
