@@ -13,7 +13,7 @@ Integrate with Kuzzle (c'toi le Kuzzle) :
 
 Standalone :
   - `git clone https://github.com/Aschen/ctoi-le-plugin`
-  - `cd c'toi le plugin`
+  - `cd ctoi-le-plugin`
   - `docker-compose -f docker/docker-compose.yml up`
   - `curl http://localhost:7512/users/_me?pretty`
 
